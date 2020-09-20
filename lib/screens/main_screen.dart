@@ -1,6 +1,8 @@
+import 'package:clima/screens/location_screen.dart';
 import 'package:clima/services/location.dart';
+import 'package:clima/services/weather.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class MainScreen extends StatefulWidget {
 
@@ -10,27 +12,41 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
 
+  final location = Location();
+
   @override
-  void initState() {
+  void initState(){
     super.initState();
     getLocation();
   }
 
   void getLocation() async {
-    Location location = Location();
     await location.getCurrentLocation();
-    print( {'latitude': location.latitude, 'logitude': location.longitude});
+    print(location);
+    getWeather();
+  }
+
+  void getWeather() async {
+    final weather = Weather();
+    print(weather);
+    await weather.getInfoByLatLong(
+      latitude: location.latitude,
+      longitude: location.longitude,
+    );
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_)=>LocationScreen(weather: weather),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: RaisedButton(
-          child: Text('Localizar'),
-          onPressed: (){
-            getLocation();
-          }
+        child: SpinKitCircle(
+          size: 100,
+          color: Colors.teal,
         ),
       ),
     );
