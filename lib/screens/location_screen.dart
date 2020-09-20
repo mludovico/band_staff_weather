@@ -1,5 +1,4 @@
 import 'package:clima/screens/city_screen.dart';
-import 'package:clima/services/icons.dart';
 import 'package:clima/services/location.dart';
 import 'package:clima/services/weather.dart';
 import 'package:flutter/material.dart';
