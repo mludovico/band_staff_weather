@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const kTempTextStyle = TextStyle(
   fontFamily: 'Spartan MB',
-  fontSize: 100.0,
+  fontSize: 25.0,
 );
 
 const kMessageTextStyle = TextStyle(
@@ -11,12 +11,12 @@ const kMessageTextStyle = TextStyle(
 );
 
 const kButtonTextStyle = TextStyle(
-  fontSize: 30.0,
+  fontSize: 12.0,
   fontFamily: 'Spartan MB',
 );
 
 const kConditionTextStyle = TextStyle(
-  fontSize: 100.0,
+  fontSize: 15.0,
 );
 
 const kTextFieldTextStyle = TextStyle(
@@ -41,3 +41,7 @@ const kTextFieldInputDecoration = InputDecoration(
       borderSide: BorderSide.none
   ),
 );
+
+const String kPrefLastUpdateKey = 'weather_update_time';
+const String kPrefLastWeatherKey = 'last_weather_data';
+const String kPrefLastForecastKey = 'last_forecast_data';

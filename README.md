@@ -1,16 +1,16 @@
-# clima
+# Band Staff Weather
 
-A weather app that retrieves location and get localized weather information. Also very good looking UI
+A weather app that retrieves weather information on predefined band tour locations and also enables the user to search for other locations.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+Track the current weather and the forecast for the next 5 days of the main cities where shows of the tour are taking place:
 
-A few resources to get you started if this is your first Flutter project:
+- Silverstone, UK
+- São Paulo, Brazil
+- Melbourne, Australia
+- Monte Carlo, Monaco
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+##  API
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app uses infor from the [OpenWeather API](https://openwethermap.org)

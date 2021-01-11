@@ -1,4 +1,4 @@
-class WeatherModel {
+class WeatherUtil {
   String getWeatherIcon(int condition) {
     if (condition < 300) {
       return '🌩';
@@ -21,13 +21,13 @@ class WeatherModel {
 
   String getMessage(int temp) {
     if (temp > 25) {
-      return 'É hora de 🍦';
+      return 'Time for 🍦';
     } else if (temp > 20) {
-      return 'Hora de 🩳 e 👕';
+      return 'Time to 🩳 and 👕';
     } else if (temp < 10) {
-      return 'Vai precisar de 🧣 e 🧤';
+      return 'Gonna need 🧣 and 🧤';
     } else {
-      return 'Leve um 🧥 só por precaução';
+      return 'Bring a 🧥 just in case';
     }
   }
 }

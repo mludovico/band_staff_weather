@@ -9,7 +9,7 @@ class ClimaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Clima',
+      title: 'Band Staff Weather',
       theme: ThemeData.dark(),
       home: MainScreen(),
     );

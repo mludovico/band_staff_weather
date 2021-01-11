@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 
-class CityScreen extends StatefulWidget {
+class ForecastScreen extends StatefulWidget {
+
+  final String cityName;
+  ForecastScreen(this.cityName);
+
   @override
-  _CityScreenState createState() => _CityScreenState();
+  _ForecastScreenState createState() => _ForecastScreenState();
 }
 
-class _CityScreenState extends State<CityScreen> {
+class _ForecastScreenState extends State<ForecastScreen> {
 
-  final cityController = TextEditingController();
+  TextEditingController cityController;
+
+  @override
+  void initState() {
+    cityController = TextEditingController(text: widget.cityName);
+  }
 
   @override
   Widget build(BuildContext context) {
